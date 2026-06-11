@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Bubblegum Sans', cursive;
+    --font-body: 'Nunito', sans-serif;
+
+    --background: 270 40% 97%;
+    --foreground: 270 50% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 50% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 50% 15%;
+    --primary: 270 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 35 95% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 270 20% 93%;
+    --muted-foreground: 270 10% 45%;
+    --accent: 160 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 20% 88%;
+    --input: 270 20% 88%;
+    --ring: 270 70% 55%;
+    --chart-1: 270 70% 55%;
+    --chart-2: 35 95% 60%;
+    --chart-3: 160 60% 45%;
+    --chart-4: 340 80% 60%;
+    --chart-5: 200 80% 55%;
+    --radius: 1rem;
+    --sidebar-background: 270 40% 97%;
+    --sidebar-foreground: 270 50% 15%;
+    --sidebar-primary: 270 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 30% 92%;
+    --sidebar-accent-foreground: 270 50% 15%;
+    --sidebar-border: 270 20% 88%;
+    --sidebar-ring: 270 70% 55%;
+  }
+
+  .dark {
+    --background: 270 30% 8%;
+    --foreground: 270 10% 95%;
+    --card: 270 30% 12%;
+    --card-foreground: 270 10% 95%;
+    --popover: 270 30% 12%;
+    --popover-foreground: 270 10% 95%;
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 35 90% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 270 20% 18%;
+    --muted-foreground: 270 10% 60%;
+    --accent: 160 55% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 20% 20%;
+    --input: 270 20% 20%;
+    --ring: 270 70% 60%;
+    --chart-1: 270 70% 60%;
+    --chart-2: 35 90% 55%;
+    --chart-3: 160 55% 40%;
+    --chart-4: 340 75% 55%;
+    --chart-5: 200 75% 50%;
+    --sidebar-background: 270 30% 8%;
+    --sidebar-foreground: 270 10% 95%;
+    --sidebar-primary: 270 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 25% 15%;
+    --sidebar-accent-foreground: 270 10% 95%;
+    --sidebar-border: 270 20% 20%;
+    --sidebar-ring: 270 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* Ensure buttons/nav are not selectable */
+  button, a, nav, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  /* Minimum touch target size */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
