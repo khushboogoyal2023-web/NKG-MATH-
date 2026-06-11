@@ -41,7 +41,8 @@ function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
       <LanguageProvider>
-        <Router>
+        {/* यहाँ basename जोड़ने से गिटहब पेजेस पर रास्ते एकदम सही काम करेंगे */}
+        <Router basename="/NKG-MATH">
           <Routes>
             <Route element={<AppLayout />}>
               <Route path="/" element={<Home />} />
