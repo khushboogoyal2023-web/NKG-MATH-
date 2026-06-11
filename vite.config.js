@@ -1,10 +1,8 @@
-import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vitejs.dev/config/
 export default defineConfig({
-  logLevel: 'error', // केवल एरर्स दिखाएगा, फालतू की चेतावनियों को छुपाएगा
-  plugins: [
-    react(), // आपके React कोड को चलाने के लिए मुख्य प्लगइन
-  ]
-});
+  plugins: [react()],
+  base: '/NKG-MATH/', // यह आपके गिटहब प्रोजेक्ट का नाम है
+})
